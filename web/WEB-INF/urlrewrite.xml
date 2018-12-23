@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.1//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.1.dtd">
+<urlrewrite>
+    <rule>
+        <note>
+            index页面跳转
+        </note>
+        <from>^/index.html$</from>
+        <to type="forward">/index.jsp</to>
+    </rule>
+
+    <rule>
+        <note>
+            case页面跳转
+        </note>
+        <from>^/case_([a-zA-Z0-9]+).html$</from>
+        <to type="forward">/case.jsp?id=$1</to>
+    </rule>
+
+    <rule>
+        <note>
+            caseList页面跳转
+        </note>
+        <from>^/caseList_([a-zA-Z0-9]+).html$</from>
+        <to type="forward">/caseList.jsp?p=$1</to>
+    </rule>
+
+    <rule>
+        <note>
+            news页面跳转
+        </note>
+        <from>^/news_([a-zA-Z0-9]+).html$</from>
+        <to type="forward">/news.jsp?id=$1</to>
+    </rule>
+
+    <rule>
+        <note>
+            newsList页面跳转
+        </note>
+        <from>^/newsList_([a-zA-Z0-9]+).html$</from>
+        <to type="forward">/newsList.jsp?p=$1</to>
+    </rule>
+</urlrewrite>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <description>我的tld</description>
+    <display-name>mytld</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>pwk</short-name>
+    <uri>http://www.pwk.com</uri>
+    <!--case-->
+    <function>
+        <name>getCaseById</name>
+        <function-class>com.pwk.taglib.CaseFunction</function-class>
+        <function-signature>
+            com.pwk.entity.Case getById(int)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getCaseByList</name>
+        <function-class>com.pwk.taglib.CaseFunction</function-class>
+        <function-signature>
+          java.util.List getByList(int,int)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getCaseTotal</name>
+        <function-class>com.pwk.taglib.CaseFunction</function-class>
+        <function-signature>
+            int getTotal()
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getCaseAll</name>
+        <function-class>com.pwk.taglib.CaseFunction</function-class>
+        <function-signature>
+            java.util.List getAll()
+        </function-signature>
+    </function>
+
+    <!--news-->
+    <function>
+        <name>getNewsById</name>
+        <function-class>com.pwk.taglib.NewsFunction</function-class>
+        <function-signature>
+            com.pwk.entity.News getById(int)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getNewsByList</name>
+        <function-class>com.pwk.taglib.NewsFunction</function-class>
+        <function-signature>
+            java.util.List getByList(int,int)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getNewsTotal</name>
+        <function-class>com.pwk.taglib.NewsFunction</function-class>
+        <function-signature>
+            int getTotal()
+        </function-signature>
+    </function>
+
+    <!--tool-->
+    <function>
+        <name>getPics</name>
+        <function-class>com.pwk.tools.StringTools</function-class>
+        <function-signature>
+            java.util.List getPics(java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getSmallPics</name>
+        <function-class>com.pwk.tools.StringTools</function-class>
+        <function-signature>
+            java.util.List getSmallPics(java.lang.String)
+        </function-signature>
+    </function>
+</taglib>

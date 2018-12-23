@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="struts-default.xml"/>
+    <!--指定web应用的默认编码集，相当于调用HttpServletRequest的setCharacterEncoding的方法 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.action.extension" value="do" />
+    <!-- 开发模式下使用，这样可以打印更详细的错误信息 -->
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.multipart.saveDir" value="/opt/temp/upload"/>
+    <constant name="struts.multipart.maxSize" value="10240000" />
+
+    <package name="default" namespace="/default" extends="struts-default">
+        <global-results>
+            <result name="global.index">/index.jsp</result>
+            <result name="global.error">/index.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping result="global.error" exception="java.lang.Exception" />
+        </global-exception-mappings>
+    </package>
+
+    <package name="admin" extends="struts-default" namespace="/admin">
+        <action name="/*" class="com.pwk.action.AdminAction" method="{1}"/>
+    </package>
+
+    <package name="case" extends="struts-default" namespace="/case">
+        <action name="/*" class="com.pwk.action.CaseAction" method="{1}"/>
+    </package>
+
+    <package name="image" extends="struts-default" namespace="/image">
+        <action name="/*" class="com.pwk.action.ImageAction" method="{1}"/>
+    </package>
+
+    <package name="news" extends="struts-default" namespace="/news">
+        <action name="/*" class="com.pwk.action.NewsAction" method="{1}"/>
+    </package>
+
+</struts>
